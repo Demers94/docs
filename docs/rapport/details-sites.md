@@ -14,12 +14,12 @@ Utilisé à l'interne pour l'envoi de campagnes par courriel. Possibilité de cr
 
 Utilisé comme proxy pour les liens qui sont dans les courriels envoyés via aeromails. En ce moment on l'a seulement mit en place pour la page `/employeurs-de-la-semaine`
 
-Comment ça fonctionne : 
+**Comment ça fonctionne?** 
 
 - On remplace les liens dans les courriels pour utiliser le proxy. https://aeroemploi.ca devient http://click.email.aeromails.ca?url=https://aeroemploi.ca
 - Quand on visite ce lien, on est redirigé vers le site original après quelques instants, en Javsacript (pas de redirection HTTP 301)
 
-Pourquoi : 
+**Pourquoi utiliser un proxy pour les liens?**
 
 Quand on envoit une campagne courriel, on peut envoyer jusqu'à 15 emails / seconde dans le peak. Si un courriel contient une dizaine de liens et que des systèmes automatisés (ex: virus scanner Outlook) visitent ces liens, ça fait des centaines de requêtes par seconde sur nos sites.
 
@@ -136,7 +136,7 @@ Je pense que nous pouvons supprimé ce site de Forge si ça ne sert plus.
 
 ## aerotechnology.ca
 
-C'est l'ancien nom de aeroweb.ca. Nous avons conservé le site dans Forge afin de le conserver pour les redirections, mais je pense que nous pouvons le supprimer. Ça ne fonctionne plus et ça fait plusieurs années que le nom n'a pas servi.
+C'est l'ancien nom de aeroweb.ca. Nous avons conservé le site dans Forge pour les redirections, mais je pense que nous pouvons le supprimer. Ça ne fonctionne plus et ça fait plusieurs années que le nom n'a pas servi.
 
 ::: tip Note
 Je pense que nous pouvons supprimé ce site de Forge si ça ne sert plus.
