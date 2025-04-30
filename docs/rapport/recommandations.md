@@ -85,3 +85,25 @@ Le pricing n'est pas annoncé encore, mais on pourra l'essayer pour un mois sur 
 Ces outils peuvent nous avertir automatiquement quand une nouvelle erreur se produit. On peut s'y connecte et voir plus de détails que les logs Forge pour débugger un problème. On voit aussi des détails sur l'utilisateur qui a eu le problème (IP, navigateur utilisé, autres informations utiles pour identifier l'entreprise ou utilisateur spécifique pour mieux debugger).
 
 [Sentry](https://sentry.io/welcome/) a une bonne intégration avec Forge, c'est ce que j'utilise en ce moment pour Aeroweb. On pourra regarder si Nightwatch répond à tous les besoins, possible que ça nous suffice.
+
+# Long-terme
+
+Je pense qu'à court terme la priorité devrait vraiment être d'avoir une infra stable et d'une excellente compréhension de celle-ci. Il faut pouvoir mettre notre focus sur les autres parties de la business sans être obligé de s'arrêter à toutes les semaines pour éteindre des feux parce que l'infrastructure actuelle n'est pas robuste.
+
+Une fois qu'on aura des fondations solides, on pourra continuer d'améliorer notre setup.
+
+## Gestion des accès
+
+Il faut trouver une alternative pour éviter d'avoir à s'envoyer des accès sur Slack ou Basecamp pour se connecter aux différents outils. Il faut aussi revoir nos politiques d'accès aux différents systèmes, et s'assurer que nous utilisions les méthodes les plus robustes et sécuritaires pour se connecter aux différents outils.
+
+- Password manager : utiliser un outil comme [1Password](https://1password.com/) ou [Dashlane](https://www.dashlane.com/) pour sauvegarder les identifiants. Donner accès seulement aux bonnes personnes, changer les mots de passe actuels qui ne sont pas sécures
+
+- Désactiver la connexion par mot de passe aux bases de données et autres services exposés à l'internet - utilisé seulement des clés SSH
+
+- Améliorer le logging pour les tentatives de connexion et les actions faites sur les différents sites (identifier les attaques contre un compte en particulier, être capable de voir les actions qu'un utilisateur a fait s'il y a des problèmes, etc)
+
+## Caching des pages / assets
+
+Pour un site comme Aéroemploi où les utilisateurs n'ont pas de comptes et que tout le monde voit la même page, on peut utiliser du caching plus agressif pour servir le contenu de la page sans même avoir à faire de requête à notre propre serveur.
+
+Ça serait bon aussi de mettre en place un [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) pour servir les requêtes d'images et de vidéos. Pour les logos des entreprises par exemple, ça ne change pas de requête en requête, c'est le même logo pour tout le monde. Si on peut avoir un CDN qui sert les requêtes sans avoir à faire appel à notre propre serveur, on sauve des ressources.
