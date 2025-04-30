@@ -20,6 +20,15 @@ export default {
                 { text: "Recommandations", link: '/rapport/recommandations' },
             ]
         },
+        {
+          text: "Aeromails",
+          collapsed: false,
+          items: [
+              { text: 'Introduction', link: '/aeromails/intro' },
+              { text: 'Détails techniques', link: '/aeromails/tech' },
+              { text: 'Limitations et améliorations', link: '/aeromails/limitations' },
+          ]
+        }
     ]
   }
 }
