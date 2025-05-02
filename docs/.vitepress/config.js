@@ -29,14 +29,14 @@ export default {
                     // { text: 'Limitations et améliorations', link: '/aeromails/limitations' },
                 ],
             },
-            // {
-            //     text: 'Aerotalent',
-            //     collapsed: false,
-            //     items: [
-            //         { text: 'Introduction', link: '/aerotalent/intro' },
-            //         { text: 'Détails techniques', link: '/aerotalent/tech' },
-            //     ],
-            // },
+            {
+                text: 'Aerotalent',
+                collapsed: false,
+                items: [
+                    { text: 'Introduction', link: '/aerotalent/intro' },
+                    { text: 'Détails techniques', link: '/aerotalent/tech' },
+                ],
+            },
         ],
     },
 };
