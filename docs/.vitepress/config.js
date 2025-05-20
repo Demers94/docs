@@ -26,7 +26,6 @@ export default {
                 items: [
                     { text: 'Introduction', link: '/aeromails/intro' },
                     { text: 'Détails techniques', link: '/aeromails/tech' },
-                    // { text: 'Limitations et améliorations', link: '/aeromails/limitations' },
                 ],
             },
             {
@@ -35,6 +34,22 @@ export default {
                 items: [
                     { text: 'Introduction', link: '/aerotalent/intro' },
                     { text: 'Détails techniques', link: '/aerotalent/tech' },
+                ],
+            },
+            {
+                text: 'Aeroweb',
+                collapsed: false,
+                items: [
+                    { text: 'Introduction', link: '/aeroweb/intro' },
+                    { text: 'Détails techniques', link: '/aeroweb/tech' },
+                ],
+            },
+            {
+                text: 'Aeroemploi',
+                collapsed: false,
+                items: [
+                    { text: 'Introduction', link: '/aeroemploi/intro' },
+                    { text: 'Détails techniques', link: '/aeroemploi/tech' },
                 ],
             },
         ],
